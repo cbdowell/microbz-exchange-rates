@@ -5,6 +5,8 @@ import { ApolloProvider, Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
 
+import registerServiceWorker from './registerServiceWorker'
+
 const client = new ApolloClient({
     uri: `https://w5xlvm3vzz.lp.gql.zone/graphql`
 })
@@ -51,3 +53,4 @@ const App = () => (
 )
 
 render(<App />, document.getElementById('root'))
+registerServiceWorker()
