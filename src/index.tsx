@@ -9,18 +9,6 @@ const client = new ApolloClient({
     uri: `https://w5xlvm3vzz.lp.gql.zone/graphql`
 })
 
-// client
-//     .query({
-//         query: gql`
-//             {
-//                 rates(currency: "USD") {
-//                     currency
-//                 }
-//             }
-//         `
-//     })
-//     .then(({ data }) => console.log({ data }))
-
 const RATES_QUERY = gql`
     {
         rates(currency: "USD") {
@@ -54,7 +42,9 @@ const Title = styled.h1`
 const App = () => (
     <ApolloProvider client={client}>
         <div>
-            <Title>Microbz Exchange Rates</Title>
+            <Title>
+                Microbz: Exchange Rates
+            </Title>
             <ExchangeRates />
         </div>
     </ApolloProvider>
