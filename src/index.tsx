@@ -3,7 +3,6 @@ import { render } from 'react-dom'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider, Query } from 'react-apollo'
 import gql from 'graphql-tag'
-import styled from 'styled-components'
 
 import registerServiceWorker from './registerServiceWorker'
 
@@ -35,18 +34,10 @@ const ExchangeRates = () => (
     </Query>
 )
 
-const Title = styled.h1`
-    font-size: 1.5em
-    text-align: center
-    color: palevioletred
-`
-
 const App = () => (
     <ApolloProvider client={client}>
         <div>
-            <Title>
-                Microbz: Exchange Rates
-            </Title>
+            <h2>Microbz: Exchange Rates</h2>
             <ExchangeRates />
         </div>
     </ApolloProvider>
